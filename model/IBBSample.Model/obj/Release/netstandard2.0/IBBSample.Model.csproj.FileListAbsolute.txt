@@ -1,0 +1,8 @@
+C:\Users\Yigit\source\repos\IBBSample\model\IBBSample.Model\bin\Release\netstandard2.0\IBBSample.Model.deps.json
+C:\Users\Yigit\source\repos\IBBSample\model\IBBSample.Model\bin\Release\netstandard2.0\IBBSample.Model.dll
+C:\Users\Yigit\source\repos\IBBSample\model\IBBSample.Model\bin\Release\netstandard2.0\IBBSample.Model.pdb
+C:\Users\Yigit\source\repos\IBBSample\model\IBBSample.Model\obj\Release\netstandard2.0\IBBSample.Model.csprojAssemblyReference.cache
+C:\Users\Yigit\source\repos\IBBSample\model\IBBSample.Model\obj\Release\netstandard2.0\IBBSample.Model.AssemblyInfoInputs.cache
+C:\Users\Yigit\source\repos\IBBSample\model\IBBSample.Model\obj\Release\netstandard2.0\IBBSample.Model.AssemblyInfo.cs
+C:\Users\Yigit\source\repos\IBBSample\model\IBBSample.Model\obj\Release\netstandard2.0\IBBSample.Model.dll
+C:\Users\Yigit\source\repos\IBBSample\model\IBBSample.Model\obj\Release\netstandard2.0\IBBSample.Model.pdb

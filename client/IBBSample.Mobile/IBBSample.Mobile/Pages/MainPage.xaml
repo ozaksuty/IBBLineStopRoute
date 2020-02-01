@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:IBBSample.Mobile.ViewModels"
+             xmlns:converter="clr-namespace:IBBSample.Mobile.Converters"
+             x:Class="IBBSample.Mobile.Pages.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:GridVisibilityConverter x:Key="GridVisibilityConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker ItemsSource="{Binding TerminalList}"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedItem="{Binding Terminal}"
+                    Title="Select Terminal" />
+
+            <Grid IsVisible="{Binding Terminal, Converter={StaticResource GridVisibilityConverter}}"
+                  Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Name:" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Code:" Grid.Row="1" Grid.Column="0" />
+                <Label Text="Coordinate:" Grid.Row="2" Grid.Column="0" />
+
+                <Label Text="{Binding Terminal.Name}" Grid.Row="0" Grid.Column="1" />
+                <Label Text="{Binding Terminal.Code}" Grid.Row="1" Grid.Column="1" />
+                <Label Text="{Binding Terminal.Coordinate}" Grid.Row="2" Grid.Column="1" />
+
+                <Button Text="Go to location"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        Command="{Binding LocationCommand}"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
